@@ -53,7 +53,7 @@ public class RequestThread extends Thread {
 		
 		while (true) {
 			int length = 4;
-			if (fileData.length / 512 < 1) {
+			if (fileData.length < 512) {
 				length += fileData.length;
 			} else {
 				length += 512;
